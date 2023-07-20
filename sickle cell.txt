@@ -1,0 +1,19 @@
+def is_sickle_cell_carrier(allele1, allele2):
+    # List of possible sickle cell genotypes
+    sickle_cell_genotypes = ['HbS', 'HbC', 'HbE', 'HbD']
+
+    # Make the alleles uppercase for easier comparison
+    allele1 = allele1.upper()
+    allele2 = allele2.upper()
+
+    # Check if either allele matches one of the sickle cell genotypes
+    if allele1 in sickle_cell_genotypes or allele2 in sickle_cell_genotypes:
+        return True
+
+    return False
+
+# Example usage:
+allele1 = 'HbA'
+allele2 = 'HbS'
+result = is_sickle_cell_carrier(allele1, allele2)
+print(f"Is the person a sickle cell carrier? {result}")
